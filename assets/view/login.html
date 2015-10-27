@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3 login" layout="column" ng-cloak="">
+            <md-whiteframe class="md-whiteframe-z1">
+                <md-tabs class="md-primary" md-border-bottom md-autoselect md-dynamic-height>
+                    <md-tab id="tab1">
+                        <md-tab-label>Вход</md-tab-label>
+
+                        <md-tab-body class="md-padding">
+
+                            <md-input-container class="md-icon-float">
+                                <ng-md-icon icon="person" size="32"></ng-md-icon>
+                                <input ng-model="user.login" type="text" placeholder="Логин" ng-required="true">
+                            </md-input-container>
+
+                            <md-input-container class="md-icon-float">
+                                <ng-md-icon icon="verified_user" size="28"></ng-md-icon>
+                                <input ng-model="user.pass" type="password" placeholder="Пароль" ng-required="true">
+                            </md-input-container>
+
+                            <md-button class="md-raised md-primary pull-right" ng-click="login();">Войти</md-button>
+
+                        </md-tab-body>
+                    </md-tab>
+
+                    <md-tab id="tab2" class="register">
+                        <md-tab-label>Регистрация</md-tab-label>
+                        <md-tab-body class="md-padding">
+                            <div class="my-drop-zone pull-left col-lg-4" >
+                                Перетащите сюда Ваше фото
+                            </div>
+                            <div class="pull-right col-lg-8">
+                                <md-input-container class="rowtr">
+                                    <label>Email *</label>
+                                    <input ng-model="register.email" type="email">
+                                </md-input-container>
+                                <md-input-container class="rowtr">
+                                    <label>Логин *</label>
+                                    <input ng-model="register.username" type="text">
+                                </md-input-container>
+
+                                <md-input-container class="rowtr">
+                                    <label>Имя *</label>
+                                    <input ng-model="register.nameD" type="text">
+                                </md-input-container>
+
+                                <md-input-container class="rowtr">
+                                    <label>Фамилия *</label>
+                                    <input ng-model="register.surname" type="text">
+                                </md-input-container>
+
+
+
+
+                                <md-input-container class="rowtr">
+                                    <label>Пароль *</label>
+                                    <input ng-model="register.password" id="passw" type="password">
+                                    <div ng-messages="projectForm.description.$error">
+                                        <div ng-message="omg" id="omg">Не совпадают</div>
+                                    </div>
+                                </md-input-container>
+
+                                <md-input-container class="rowtr">
+                                    <label>Повтор пароля *</label>
+                                    <input ng-model="checkpassword" id="passw1" type="password">
+                                </md-input-container>
+
+                                <md-datepicker class="rowtr" ng-model="register.date" md-placeholder="Дата рождения"></md-datepicker>
+                                <md-input-container class="rowtr">
+                                    <label>Город</label>
+                                    <input ng-model="register.city" type="text">
+                                </md-input-container>
+                                <md-button class="md-raised md-primary pull-right" ng-click="register();">Регистрация</md-button>
+
+                            </div>
+
+                        </md-tab-body>
+                    </md-tab>
+
+                </md-tabs>
+            </md-whiteframe>
+        </div>
+    </div>
+</div>
