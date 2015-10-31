@@ -19,6 +19,10 @@
                 templateUrl: 'view/login.html',
                 controller: 'LoginController'
             })
+            .when('/index',{
+                templateUrl: 'view/index.html',
+                controller: 'IndexController'
+            })
             .otherwise({
                 redirectTo: '/'
             })
