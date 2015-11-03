@@ -8,7 +8,7 @@ var passwordHash = require('password-hash');
 
 module.exports = {
 
-    register: function (req, res) {
+    create: function (req, res) {
         var elem = {
             username : req.param('username'),
             password : req.param('password'),
@@ -31,10 +31,8 @@ module.exports = {
 
 
     auth: function (req, res) {
-
         var username = req.param('username'),
             password = req.param('password');
-
         if (!username || !password) {
             return res.send(500);
         };
@@ -45,7 +43,7 @@ module.exports = {
                req.session.auth = true;
                req.session.User = user;
 
-               return res.user;
+               return res.send(user);
 
            }else{return res.send(500);};
         });

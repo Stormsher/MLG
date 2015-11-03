@@ -28,9 +28,7 @@
                     month: $scope.register.date.getMonth(),
                     year: $scope.register.date.getFullYear()
                 });
-
-                console.log(register);
-                Users.register().then(function () {
+                register.$save().then(function () {
                     alert("");
                 });
             }
@@ -38,9 +36,9 @@
         };
 
         $scope.auth = function(){
-            $http.get('/users/auth', {username: $scope.user.login, password: $scope.user.pass}).then(
-                function (data){
-                    console.log(data);
+            $http.get('/users/auth', {params : {username: $scope.user.login, password: $scope.user.pass}}).then(
+                function (resp){
+                    $scope.user = resp.data;
                 },function(err){
                     console.log(err);
                 });

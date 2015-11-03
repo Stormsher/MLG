@@ -9,7 +9,7 @@
         </div>
         <div class="col-lg-3 auth">
 
-            <a href="#" class="authori"><ng-md-icon icon="account_circle" style="fill: white" size="20"></ng-md-icon>Войти</a>
+            <a class="authori" data-toggle="modal" data-target="#myModal"  ><ng-md-icon icon="account_circle" style="fill: white" size="20"></ng-md-icon>Войти</a>
         </div>
 
 
@@ -39,5 +39,88 @@
                 <a data-ng-href="#"><ng-md-icon icon="info_outline" style="fill: white" size="20"></ng-md-icon>О системе</a>
             </li>
         </ul>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <md-tabs class="md-primary" md-border-bottom md-autoselect md-dynamic-height>
+                <md-tab id="tab1">
+                    <md-tab-label id="clickme">Вход</md-tab-label>
+                    <md-tab-body class="md-padding">
+                        <md-input-container class="md-icon-float">
+                            <ng-md-icon icon="person" size="32"></ng-md-icon>
+                            <input ng-model="user.login" type="text" placeholder="Логин" ng-required="true">
+                        </md-input-container>
+
+                        <md-input-container class="md-icon-float">
+                            <ng-md-icon icon="verified_user" size="28"></ng-md-icon>
+                            <input ng-model="user.pass" type="password" placeholder="Пароль" ng-required="true">
+                        </md-input-container>
+
+                        <md-button class="md-raised md-primary pull-right" data-ng-click="auth()">Войти</md-button>
+
+                    </md-tab-body>
+                </md-tab>
+
+                <md-tab id="tab2" class="register">
+                    <md-tab-label>Регистрация</md-tab-label>
+                    <md-tab-body class="md-padding">
+                        <div class="my-drop-zone pull-left col-lg-4" >
+                            Перетащите сюда Ваше фото
+                        </div>
+                        <div class="pull-right col-lg-8">
+                            <md-input-container class="rowtr">
+                                <label>Email *</label>
+                                <input ng-model="register.email" type="email">
+                            </md-input-container>
+                            <md-input-container class="rowtr">
+                                <label>Логин *</label>
+                                <input ng-model="register.username" type="text">
+                            </md-input-container>
+
+                            <md-input-container class="rowtr">
+                                <label>Имя *</label>
+                                <input ng-model="register.nameD" type="text">
+                            </md-input-container>
+
+                            <md-input-container class="rowtr">
+                                <label>Фамилия *</label>
+                                <input ng-model="register.surname" type="text">
+                            </md-input-container>
+
+
+
+
+                            <md-input-container class="rowtr">
+                                <label>Пароль *</label>
+                                <input ng-model="register.password" id="passw" type="password">
+                                <div ng-messages="projectForm.description.$error">
+                                    <div ng-message="omg" id="omg">Не совпадают</div>
+                                </div>
+                            </md-input-container>
+
+                            <md-input-container class="rowtr">
+                                <label>Повтор пароля *</label>
+                                <input ng-model="checkpassword" id="passw1" type="password">
+                            </md-input-container>
+
+                            <md-datepicker class="rowtr" ng-model="register.date" md-placeholder="Дата рождения"></md-datepicker>
+                            <md-input-container class="rowtr">
+                                <label>Город</label>
+                                <input ng-model="register.city" type="text">
+                            </md-input-container>
+                            <md-button class="md-raised md-primary pull-right" ng-click="register();">Регистрация</md-button>
+
+                        </div>
+
+                    </md-tab-body>
+                </md-tab>
+
+            </md-tabs>
+        </div>
     </div>
 </div>
