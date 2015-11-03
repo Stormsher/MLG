@@ -10,7 +10,6 @@ var passwordHash = require('password-hash');
 var Users = {
 
   attributes: {
-
     username: {type: 'string', required: true, unique: true},
     password: {type: 'string', required: true, minLength: 5},
     name: {type: 'string',  minLength:3},
@@ -22,13 +21,11 @@ var Users = {
     month: {type: 'int'},
     year: {type: 'int'},
 
-
     toJSON: function() {
       var element = this.toObject();
       delete element.password;
       return element;
     }
-
   },
 
   beforeCreate: function (values, next) {

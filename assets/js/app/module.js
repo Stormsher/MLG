@@ -23,6 +23,14 @@
                 templateUrl: 'view/index.html',
                 controller: 'IndexController'
             })
+            .when('/tasks',{
+                templateUrl: 'view/tasks.html',
+                controller: 'TasksController'
+            })
+            .when('/project',{
+                templateUrl: 'view/project.html',
+                controller: 'ProjectController'
+            })
             .otherwise({
                 redirectTo: '/'
             })

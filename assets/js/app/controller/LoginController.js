@@ -6,8 +6,8 @@
 
     angular.module('app').controller('LoginController',LoginController);
 
-    LoginController.$inject = ["$scope", "Users"];
-    function LoginController($scope, Users){
+    LoginController.$inject = ["$scope", "Users", "Auth", "$http"];
+    function LoginController($scope, Users, Auth, $http){
         $scope.login={
             name:'',
             pass:''
@@ -17,7 +17,6 @@
             if ($scope.register.password !== $scope.checkpassword) {
                 $("#omg").slideDown(300);
             } else {
-
                 var register = new Users({
                     username: $scope.register.username,
                     password: $scope.register.password,
@@ -31,11 +30,24 @@
                 });
 
                 console.log(register);
-                register.$save().then(function () {
+                Users.register().then(function () {
                     alert("");
                 });
             }
 
+        };
+
+        $scope.auth = function(){
+            $http.get('/users/auth', {username: $scope.user.login, password: $scope.user.pass}).then(
+                function (data){
+                    console.log(data);
+                },function(err){
+                    console.log(err);
+                });
         }
+
+
+
+
     }
 })();

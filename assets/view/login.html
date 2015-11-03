@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container login">
     <div class="row">
         <div class="col-lg-6 col-lg-offset-3 login" layout="column" ng-cloak="">
             <md-whiteframe class="md-whiteframe-z1">
@@ -8,17 +8,17 @@
 
                         <md-tab-body class="md-padding">
 
-                            <md-input-container class="md-icon-float">
-                                <ng-md-icon icon="person" size="32"></ng-md-icon>
-                                <input ng-model="user.login" type="text" placeholder="Логин" ng-required="true">
-                            </md-input-container>
+                                <md-input-container class="md-icon-float">
+                                    <ng-md-icon icon="person" size="32"></ng-md-icon>
+                                    <input ng-model="user.login" type="text" placeholder="Логин" ng-required="true">
+                                </md-input-container>
 
-                            <md-input-container class="md-icon-float">
-                                <ng-md-icon icon="verified_user" size="28"></ng-md-icon>
-                                <input ng-model="user.pass" type="password" placeholder="Пароль" ng-required="true">
-                            </md-input-container>
+                                <md-input-container class="md-icon-float">
+                                    <ng-md-icon icon="verified_user" size="28"></ng-md-icon>
+                                    <input ng-model="user.pass" type="password" placeholder="Пароль" ng-required="true">
+                                </md-input-container>
 
-                            <md-button class="md-raised md-primary pull-right" ng-click="login();">Войти</md-button>
+                                <md-button class="md-raised md-primary pull-right" data-ng-click="auth()">Войти</md-button>
 
                         </md-tab-body>
                     </md-tab>
