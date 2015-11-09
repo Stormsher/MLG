@@ -12,7 +12,8 @@ var Tasks = {
     description: {type: 'string'},
     author: {type: 'string'},
     status: {type: 'string'},
-    endtime: {type: 'date'}
+    endtime: {type: 'date'},
+    proj : {type: 'string'}
   }
 };
 

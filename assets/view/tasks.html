@@ -81,6 +81,14 @@
                             <label>Статус</label>
                             <input ng-model="task.status" type="text">
                         </md-input-container>
+                        <md-input-container class="rowtr">
+                            <label>Проект (оставить пустым если личный)</label>
+                            <input ng-model="task.proj" type="text">
+                        </md-input-container>
+                        <md-input-container class="rowtr">
+                            <label>Завершен</label>
+                            <input ng-model="task.endtime" type="text">
+                        </md-input-container>
                     </div>
                     <div class="modal-footer">
                         <md-button class="md-raised"  data-dismiss="modal"><ng-md-icon icon="cancel" style="fill: black" size="20"></ng-md-icon>Закрыть</md-button>

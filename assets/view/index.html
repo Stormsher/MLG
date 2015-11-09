@@ -9,7 +9,7 @@
         </div>
         <div class="col-lg-3 auth">
 
-          <a href="#" class="authori"><ng-md-icon icon="account_circle" style="fill: white" size="20"></ng-md-icon>Войти</a>
+          <span data-toggle="modal" data-target="#login" class="authori"><ng-md-icon icon="account_circle" style="fill: white" size="20"></ng-md-icon>Войти</span>
 
           <span class="logined">{{name}} {{surname}}</span>
         </div>
@@ -46,7 +46,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <md-tabs class="md-primary" md-border-bottom md-autoselect md-dynamic-height>

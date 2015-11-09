@@ -55,7 +55,7 @@
                   $cookies.put('surname', resp.data.surname);
 
                   $(".menu").slideDown(300);
-                  $('#myModal').modal('hide');
+                  $('#login').modal('hide');
               },function(err){
                   console.log(err);
               });
