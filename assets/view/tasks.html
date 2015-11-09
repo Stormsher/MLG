@@ -9,7 +9,9 @@
         </div>
         <div class="col-lg-3 auth">
 
-            <a href="#" class="authori"><ng-md-icon icon="account_circle" style="fill: white" size="20"></ng-md-icon>Войти</a>
+          <a href="#" class="authori"><ng-md-icon icon="account_circle" style="fill: white" size="20"></ng-md-icon>Войти</a>
+
+          <span class="logined">{{name}} {{surname}}</span>
         </div>
     </div>
 </div>
@@ -63,13 +65,21 @@
                         <h4 class="modal-title" id="myModalLabel">Новая задача</h4>
                     </div>
                     <div class="modal-body">
+                      <md-input-container class="rowtr hidden">
+                          <label>Id</label>
+                          <input ng-model="task.id" type="text">
+                      </md-input-container>
                         <md-input-container class="rowtr">
                             <label>Название</label>
-                            <input ng-model="tasks.name" type="text">
+                            <input ng-model="task.title" type="text">
                         </md-input-container>
                         <md-input-container class="rowtr">
                             <label>Описание</label>
-                            <input ng-model="description.repository" type="text">
+                            <input ng-model="task.description" type="text">
+                        </md-input-container>
+                        <md-input-container class="rowtr">
+                            <label>Статус</label>
+                            <input ng-model="task.status" type="text">
                         </md-input-container>
                     </div>
                     <div class="modal-footer">
@@ -81,8 +91,8 @@
             </div>
         </div>
         <div class="projects">
-            <md-whiteframe class="md-whiteframe-z1 col-lg-12" data-ng-repeat="project in projects">
-                <div class="col-lg-3">{{project.name}}</div>
+            <md-whiteframe class="md-whiteframe-z1 col-lg-12" data-ng-repeat="task in tasks">
+                <div class="col-lg-3">{{task.title}}</div>
                 <div class="col-lg-3 pull-right">
                     <ng-md-icon icon="rate_review" style="fill: black" size="24"></ng-md-icon>
                     <ng-md-icon icon="delete" style="fill: black" size="24"></ng-md-icon>

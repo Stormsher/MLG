@@ -9,8 +9,9 @@
 var Projects = {
   attributes: {
     name: {type: 'string'},
-    repository: {type: 'string'}
+    repository: {type: 'string'},
+    headmaster : {type: 'string'}
   }
 };
 
-module.exports = Projects ;
+module.exports = Projects;

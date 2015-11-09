@@ -1,5 +1,5 @@
 /**
- * Created by Виктор on 27.10.2015.
+ * Created by пїЅпїЅпїЅпїЅпїЅпїЅ on 27.10.2015.
  */
 (function(){
     'use strict';
@@ -9,6 +9,7 @@
         'ngResource',
         'ngMaterial',
         'ngMdIcons',
+        'ngCookies',
         'angularFileUpload'
     ]).config(appConfig);
 

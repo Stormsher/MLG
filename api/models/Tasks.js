@@ -8,8 +8,11 @@
 
 var Tasks = {
   attributes: {
-    name: {type: 'string'},
-    repository: {type: 'string'}
+    title: {type: 'string'},
+    description: {type: 'string'},
+    author: {type: 'string'},
+    status: {type: 'string'},
+    endtime: {type: 'date'}
   }
 };
 
