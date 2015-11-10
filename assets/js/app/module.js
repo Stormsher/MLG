@@ -10,7 +10,7 @@
         'ngMaterial',
         'ngMdIcons',
         'ngCookies',
-        'angularFileUpload'
+        'ui.bootstrap'
     ]).config(appConfig);
 
     appConfig.$inject = ["$routeProvider"];

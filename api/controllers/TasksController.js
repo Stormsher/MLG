@@ -11,17 +11,23 @@ module.exports = {
             title: req.param('title'),
             description: req.param('description'),
             author: req.param('author'),
-            status: req.param('status'),
+            starttime: req.param('starttime'),
             endtime: req.param('endtime'),
             proj : req.param('proj')
-
-
         };
 
-        Projects.create(elem).exec(function (err) {
+        Tasks.create(elem).exec(function (err) {
             if (err) { console.log(err); return res.send(500);}
-            req.session.auth = true;
-            res.redirect('/');
         });
+    },
+    remove : function (req,res){
+      var elem = {
+          id: req.param('id'),
+
+      };
+
+      Tasks.remove(elem).exec(function (err) {
+          if (err) { console.log(err); return res.send(500);}
+      });
     }
 };

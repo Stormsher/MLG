@@ -52,7 +52,7 @@
               },function(err){
                   alert(err);
               });
-            }else{
+            } else{
               var proj = Projects.get({id: $scope.proj.id}, function(){
                 proj.name = $scope.proj.name;
                 proj.repository = $scope.proj.repository;

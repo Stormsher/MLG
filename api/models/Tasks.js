@@ -11,8 +11,8 @@ var Tasks = {
     title: {type: 'string'},
     description: {type: 'string'},
     author: {type: 'string'},
-    status: {type: 'string'},
-    endtime: {type: 'date'},
+    starttime: {type: 'string'},
+    endtime: {type: 'string'},
     proj : {type: 'string'}
   }
 };
